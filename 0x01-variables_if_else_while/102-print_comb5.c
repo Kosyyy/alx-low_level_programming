@@ -7,26 +7,35 @@
 
 int main(void)
 {
-	int i, p, y;
-
-	for (i = 0; i < 100; i++) /*print first two digit combo*/
+	int i, p, y, z;
+	
+	for (i = '0'; i <= '9'; i++)
 	{
-		for (p = i + 1; p < 10; p++)
+		for (p = '0'; p <= '9'; p++)
 		{
-			for (y = p + 1; y < 10; y++)
+			for (y = p + 1; y <= '9'; y++)
 			{
-					putchar((i % 10) + '0');
-					putchar((p % 10) + '0');
-					putchar((y % 10) + '0');
-
-					if (i == 7 && p == 8 && y == 9)
-					continue;
-
-					putchar(',');
+				for (z = ones + 1; z <= '9'; z++)
+				{
+					putchar(i);
+					putchar(p);
 					putchar(' ');
+					putchar(y);
+					putchar(z);
+
+					if (!((i == '9' && p == '8') &&
+								 (y == '9' && z == '9')))
+					{
+						putchar(',');
+						putchar(' ');
+					}
+				}
+				z ='0';
 			}
-			}
-			}
-			putchar('\n');
-			return (0);
+		}
+	}
+	putchar('\n');
+
+	return(0);
 }
+
