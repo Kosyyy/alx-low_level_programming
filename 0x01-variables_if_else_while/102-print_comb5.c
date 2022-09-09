@@ -8,7 +8,7 @@
 int main(void)
 {
 	int i, p, y, z;
-	
+
 	for (i = '0'; i <= '9'; i++)
 	{
 		for (p = '0'; p <= '9'; p++)
@@ -30,12 +30,12 @@ int main(void)
 						putchar(' ');
 					}
 				}
-				z ='0';
+				z = '0';
 			}
 		}
 	}
 	putchar('\n');
 
-	return(0);
+	return (0);
 }
 
