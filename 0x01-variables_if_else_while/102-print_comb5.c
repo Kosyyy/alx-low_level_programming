@@ -1,43 +1,32 @@
 #include <stdio.h>
 
 /**
- *main - print a all possible combinations of two two-digit numbers ranging from 0-99
+ *main - print a all possible combinations of two two-digit numbers from 0-99
  *Return: Always 0 (Success)
  */
 
 int main(void)
 {
-	int tens;
-	int ones;
-	int t;
-	int o;
+	int i, p, y;
 
-	for (tens = '0'; tens <= '9'; tens++) /*print first two digit combo*/
+	for (i = 0; i < 100; i++) /*print first two digit combo*/
 	{
-		for (ones = '0'; ones <= '9'; ones++)
+		for (p = i + 1; p < 10; p++)
 		{
-			for (t = tens; t <= '9'; t++) /*print second of pair*/
+			for (y = p + 1; y < 10; y++)
 			{
-				for (o = ones + 1; o <= '9'; o++)
-				{
-					putchar(tens);
-					putchar(ones);
+					putchar((i % 10) + '0');
+					putchar((p % 10) + '0');
+					putchar((y % 10) + '0');
+
+					if (i == 7 && p == 8 && y == 9)
+					continue;
+
+					putchar(',');
 					putchar(' ');
-					putchar(t);
-					putchar(o);
-
-					if (!((tens == '9' && ones == '8') &&
-						(t == '9' && o == '9')))
-					{
-						putchar(',');
-						putchar(' ');
-					}
-				}
-				o = '0';
 			}
-		}
-	}
-	putchar('\n');
-
-	return (0);
+			}
+			}
+			putchar('\n');
+			return (0);
 }
