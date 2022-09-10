@@ -7,38 +7,29 @@
 
 int main(void)
 {
-	int i;
-	int p;
-	int y;
-	int z;
+	int i, p;
 
-	for (i = '0'; i <= '9'; i++)
+	for (i = 0; i <= 100; i++)
 	{
-		for (p = '0'; p <= '9'; p++)
+		for (p = 0; p <= 100; p++)
 		{
-			for (y = p + 1; y <= '9'; y++)
+			if (p > i)
 			{
-				for (z = ones + 1; z <= '9'; z++)
-				{
-					putchar(i);
-					putchar(p);
+					putchar((i / 10) + '0');
+					putchar((i % 10) + '0');
 					putchar(' ');
-					putchar(y);
-					putchar(z);
+					putchar((p / 10) + '0');
+					putchar((p % 10) + '0');
 
-					if (!((i == '9' && p == '8') &&
-								 (y == '9' && z == '9')))
+					if (i != 98)
 					{
 						putchar(',');
 						putchar(' ');
 					}
 				}
-				z = '0';
-			}
 		}
 	}
 	putchar('\n');
-
 	return (0);
 }
 
