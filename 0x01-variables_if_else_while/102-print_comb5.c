@@ -13,6 +13,10 @@ int main(void)
 	for (i = 0; i < 100; i++)
 	{
 		for (p = 0; p < 100; p++)
+<<<<<<< HEAD
+=======
+		{
+>>>>>>> adb5e6cab117fa08f9708361d4502a243e7155d3
 
 			if (p > i)
 			{
