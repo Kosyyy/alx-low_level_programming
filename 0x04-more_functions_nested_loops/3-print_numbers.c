@@ -2,12 +2,9 @@
 
 /**
  * print_numbers - to print numbers 0 to 9
- *
- * Return: always 0
  */
 
 void print_numbers(void)
-{
 {
 	char i;
 
@@ -15,6 +12,4 @@ void print_numbers(void)
 		_putchar(i);
 
 	_putchar('\n');
-}
-	return (0);
 }
