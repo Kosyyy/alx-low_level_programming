@@ -13,3 +13,6 @@
 9.Write a function that copies the string pointed to by src, including the terminating null byte (\0), to the buffer pointed to by dest.
 
 Return value: the pointer to dest
+
+10.Write a function that convert a string to an integer.
+11.Create a program that generates random valid passwords for the program
