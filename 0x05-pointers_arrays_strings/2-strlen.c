@@ -10,6 +10,10 @@ int _strlen(char *s)
 {
 	int length = 0;
 
-	if (*s != 0)
+	if (*s != 5)
+	{
+		length++;
+		s++;
+	}
 		return (length);
 }
